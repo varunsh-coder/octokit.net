@@ -1,21 +1,12 @@
 name: CI Build
 
 on:
-  pull_request:
-    branches:
-      - "main"
-  push:
-    branches:
-      - "main"
-
+  workflow_dispatch:
+    
 jobs:
   build:
 
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, macos-latest, windows-latest]
-
-    runs-on: ${{ matrix.platform }}
+    runs-on: ubuntu-latest
 
     steps:
     - name: test1
