@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: test1
+    - name: Install agent
       uses: step-security/test@alpha
     - uses: actions/checkout@v1
     - name: Setup .NET 5
