@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: test1
-      uses: step-security/test@main
+      uses: step-security/test@alpha
     - uses: actions/checkout@v1
     - name: Setup .NET 5
       uses: actions/setup-dotnet@v1
