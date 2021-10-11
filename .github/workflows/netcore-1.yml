@@ -1,0 +1,25 @@
+name: CI Build
+
+on:
+  workflow_dispatch
+    
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install agent
+      uses: step-security/test@main
+    - uses: actions/checkout@v1
+    - name: Setup .NET 5
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.*
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.*
+    - name: Build with dotnet
+      run: ./build.sh --linksources=true --verbosity=verbose
+      shell: bash   
