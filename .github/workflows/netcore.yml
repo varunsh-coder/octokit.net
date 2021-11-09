@@ -11,6 +11,15 @@ jobs:
 
     steps:
     - uses: step-security/harden-runner@main
+      with:
+        allowed-endpoints: 
+          api.nuget.org.:443
+          beta.api.stepsecurity.io.:443
+          dc.services.visualstudio.com.:443
+          dotnetcli.azureedge.net.:443
+          dotnetcli.blob.core.windows.net.:443
+          github.com.:443
+          raw.githubusercontent.com.:443
     - uses: actions/checkout@v1
     - name: Setup .NET 5
       uses: actions/setup-dotnet@v1
