@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: step-security/harden-runner@main
+    - uses: step-security/harden-runner@int
       with:
         allowed-endpoints: 
           api.nuget.org:443
