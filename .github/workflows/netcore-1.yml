@@ -17,6 +17,7 @@ jobs:
           api.nuget.org:443
           dc.services.visualstudio.com:443
           int.api.stepsecurity.io:443
+          dotnetbuilds.azureedge.net:443
           dotnetcli.azureedge.net:443
           dotnetcli.blob.core.windows.net:443
           github.com:443
