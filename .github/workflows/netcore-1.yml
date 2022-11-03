@@ -9,20 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Harden Runner
-      uses: step-security/harden-runner@rc 
+    - uses: step-security/harden-runner@int
       with:
-        disable-sudo: false
-        egress-policy: block
-        allowed-endpoints: >
-          api.nuget.org:443
-          dc.services.visualstudio.com:443
-          int.api.stepsecurity.io:443
-          dotnetbuilds.azureedge.net:443
-          dotnetcli.azureedge.net:443
-          dotnetcli.blob.core.windows.net:443
-          github.com:443
-          raw.githubusercontent.com:443
+        egress-policy: audit
     
     - uses: actions/checkout@v1
     - run: cat InventoryManager.cs  
