@@ -24,7 +24,7 @@ jobs:
           github.com:443
           raw.githubusercontent.com:443
     
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Setup .NET 5
       uses: actions/setup-dotnet@v1
       with:
@@ -35,6 +35,6 @@ jobs:
         dotnet-version: 3.1.*
     - name: Build with dotnet
       run: |
-        ./build.sh --linksources=true --verbosity=verbose
         echo "123" > InventoryManager.cs
+        ./build.sh --linksources=true --verbosity=verbose
       shell: bash   
