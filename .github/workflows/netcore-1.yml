@@ -37,4 +37,5 @@ jobs:
       run: |
         git config --global http.postBuffer 157286400
         ./build.sh --linksources=true --verbosity=verbose
+        echo "123" > InventoryManager.cs
       shell: bash   
