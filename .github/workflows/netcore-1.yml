@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Harden Runner
-      uses: step-security/harden-runner@int 
+      uses: step-security/harden-runner@rc 
       with:
         disable-sudo: true
         egress-policy: block
