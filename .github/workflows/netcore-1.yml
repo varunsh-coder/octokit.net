@@ -13,7 +13,7 @@ jobs:
       with:
         egress-policy: audit
     
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - run: cat InventoryManager.cs  
     - name: Setup .NET 5
       uses: actions/setup-dotnet@v1
